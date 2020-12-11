@@ -1,0 +1,260 @@
+/*all margin and padding controled for normalize.css for more compatibility of devices*/
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+  --main-margin: 2.5px;
+  --text-margin: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+/*General Container*/
+.container {
+  display: grid;
+  height: 100vh;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  /*------------Responsive Design------------*/
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3fr 0.5fr 5fr 0.5fr;
+  grid-template-areas:
+    "main nav nav"
+    "search search search"
+    "content1 content2 content3"
+    "footer footer footer";
+
+  /*------------Responsive Design------------*/
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+  background-image: url("bck.jpeg");
+  background-size: cover;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+/*---------------------------------------*/
+/*Information more menu*/
+nav {
+  /*background: #a7ffeb;*/
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  margin-bottom: 65px;
+}
+      button{
+        margin-top: 3rem;
+        margin-right: 0.5rem;
+
+
+        text-transform: uppercase;
+        background-color: #ff4d4d;
+        border: none;
+        width: 55%;
+        height: 30px;
+        float: right;
+      }
+      button:hover{
+
+      }
+
+      button a{
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+        display:block;
+        margin:auto;
+      }
+      button a:hover{
+      color: white;
+      }
+
+      /*------------menu--------------*/
+      ul{
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        float: right;
+
+      }
+      ul li{
+        display: inline-block;
+
+      }
+      ul li a{
+        color: white;
+        text-decoration: none;
+      }
+              nav h1{
+                margin-top: 150px;
+                color: #dfe6e9;
+              }
+              nav h3{
+                color: #dfe6e9;
+                text-align: right;
+                margin-right: var(--text-margin);
+              }
+
+/*------------Logo------------*/
+main {
+
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  display:block;
+  margin:auto;
+}
+      main img{
+      width: 200px;
+      height: 200px;
+
+
+      }
+
+/*------------looking for------------*/
+#search{
+
+  margin:auto;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+
+  grid-area: search;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  margin-left: var(--main-margin);
+  margin-right: var(--main-margin);
+  margin-bottom:80px;
+}
+            .looking {
+            width: 50%;
+            position: relative;
+            display: inline-flex;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 5px 5px 5px;
+            outline: none;
+            color: #9DBFAF;
+            }
+
+            .searchTerm:focus{
+            color: #00B4CC;
+            }
+
+            .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            display: inline-block;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+            float: right;
+            }
+
+
+/*------------Content´s------------*/
+
+#content1 {
+  background: #67e6dc;
+  opacity: 70%;
+  color: black;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  margin-left: var(--main-margin);
+}
+            #content1 h3{
+              margin: var(--text-margin);
+            }
+
+
+#content2 {
+  background: #64ffda;
+  opacity: 70%;
+  color: black;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+            #content2 h3{
+              margin: var(--text-margin);
+            }
+
+#content3 {
+  background: #73ffba;
+  opacity: 70%;
+  color: black;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  margin-right: var(--main-margin);
+}
+            #content3 h3{
+              margin: var(--text-margin);
+            }
+
+footer {
+  align-items: center;
+  text-align: center;
+  display:inline-grid;
+  background: #fbc531;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  margin-left: var(--main-margin);
+  margin-right: var(--main-margin);
+  margin-bottom: var(--main-margin);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+
+
+/*------------Responsive Design------------*/
+@media only screen and (max-width: 786px) {
+  nav ul li{
+    background: #485460;
+  }
+  ul{
+    display: grid;
+  }
+  .container {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 0.5fr 1.2fr 1.2fr 1.2fr 0.5fr;
+    grid-template-areas:
+      "main"
+      "nav"
+      "search"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
+/*------------End------------*/
